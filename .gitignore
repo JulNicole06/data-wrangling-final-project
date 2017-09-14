@@ -1,3 +1,5 @@
 .ipynb_checkpoints/*
 philadelphia_pennsylvania.osm
 csv_files/*
+create_sample.py
+sample.osm
