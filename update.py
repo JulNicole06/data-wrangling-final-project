@@ -51,7 +51,7 @@ def update_addr(key, value, mapping, expected):
 			new_value = "0"+value
 			return new_value
 		elif "-" in value:
-			return str(value[0:5])
+			return value[0:5]
 		else:
 			return value
 	elif key == "city":
