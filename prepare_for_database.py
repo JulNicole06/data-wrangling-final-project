@@ -28,6 +28,8 @@ WAY_TAGS_FIELDS = ['id', 'key', 'value', 'type']
 WAY_NODES_FIELDS = ['id', 'node_id', 'position']
 
 def get_tags(element, element_id, problem_chars=PROBLEMCHARS, default_tag_type='regular'):
+	"""Clean and shape tag XML element to Python list"""
+
 	tags = []
 	for tag in element.iter('tag'):
 		tags_dict = {}
@@ -144,11 +146,8 @@ def process_map(file_in, validate):
 		way_tags_writer.writeheader()
 
 		validator = cerberus.Validator()
-		i = 0
 		for element in get_element(file_in, tags=('node', 'way')):
 			el = shape_element(element)
-			if (i % 10000) == 0:
-				print "check in: " + str(i)
 			if el:
 					
 				if validate is True:
@@ -161,5 +160,4 @@ def process_map(file_in, validate):
 					ways_writer.writerow(el['way'])
 					way_nodes_writer.writerows(el['way_nodes'])
 					way_tags_writer.writerows(el['way_tags'])
-				i += 1
 

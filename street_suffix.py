@@ -5,10 +5,11 @@ from bs4 import BeautifulSoup
 
 def map_street_suffix():
 	'''
-	Scrapes "https://pe.usps.com/text/pub28/28apc_002.htm"
+	Scrapes data table found at: "https://pe.usps.com/text/pub28/28apc_002.htm"
 
-	OUTPUT: List of expected street suffix names as well as a dictionary mapping
-	        of street suffix abbreviations to full street suffix names
+	OUTPUT: 
+		List of expected street suffix names as well as a dictionary 
+		mapping of street suffix abbreviations to full street suffix names
 	'''
 	with requests.Session() as session:
 		response = session.get('https://pe.usps.com/text/pub28/28apc_002.htm', headers={'user-agent': 'Chrome/60.0.3112.113'})
@@ -34,11 +35,14 @@ def map_street_suffix():
 		        abbr = str(text[0]).capitalize()
 		    mapping[abbr] = street_suffix_name
 
-	#adds additional mapping for suite and cardinal direction
-	mapping['Ste'] = 'Suite'
+	#adds additional mapping for cardinal directions
 	mapping['N'] = 'North'
 	mapping['S'] = 'South'
 	mapping['E'] = 'East'
 	mapping['W'] = 'West'
+	mapping['NE'] = 'Northeast'
+	mapping['NW'] = 'Northwest'
+	mapping['SE'] = 'Southeast'
+	mapping['SW'] = 'Southwest'
 
 	return expected, mapping
