@@ -3,9 +3,24 @@
 
 ## Project Details
 
-This project is connected to the Data Wrangling course. You have the choice between two databases for this project: SQL and MongoDB. For an explanation of the differences between these two databases, see this node. There are separate instructions where relevant below for each database choice.
+This project is connected to the Data Wrangling course and I have chosen to use SQL for the database.
 
-Here's what you should do:
+#### Project Rubric can be found here: https://review.udacity.com/#!/rubrics/25/view
 
-### Step One - Complete Programming Exercises
-Make sure all programming exercises are solved correctly in the "Case Study: OpenStreetMap Data" Lesson in the course you have chosen (MongoDB or SQL). This is the last lesson in that section.
+### Files included in this submission:
+
+1. audit.py
+	Code used to audit OSM XML file before 
+
+2. street_suffix.py
+	Code used to scrape 'https://pe.usps.com/text/pub28/28apc_002.htm' to obtain a mapping of street suffix abbreviations to full street suffix names
+
+3. update.py
+	Code used to programatically "clean" values investigated in audit.py
+
+4. schema.py
+	Code provided by Udacity to validate that the transformed data is in the correct format
+
+5. prepare_for_database.py
+	Initial code provided by Udacity to clean and shape XML elements into provided schema for conversion to .csv files in preparation for upload to SQL database.  I updated the shape_element() fuction and created the get_tags() function to complete this task.  
+	
