@@ -30,8 +30,11 @@ Code used to import .csv files into SQL tables
 ##### 7. sample.osm
 sample OSM XML file of Roswell, GA
 
-##### 8. final_submission.py
+##### 8. roswell.db
+database created from full roswell.osm XML file.  
+
+##### 9. final_submission.py
 Code used to run files 1-6 created in this project for the final submission
 
-##### 9. submission_document.pdf
+##### 10. submission_document.pdf
 Project Summary and write-up
