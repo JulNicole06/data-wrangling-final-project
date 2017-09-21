@@ -105,7 +105,7 @@ def import_table(database, csv_file, table_name, connection, cursor):
 
 
 
-	elif table_name == 'way_nodes':
+	elif table_name == 'ways_nodes':
 		cursor.execute('''
 			CREATE TABLE ways_nodes(id INTEGER, node_id INTEGER, position INTEGER)
 			''')	
