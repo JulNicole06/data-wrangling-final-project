@@ -58,7 +58,7 @@ def import_table(database, csv_file, table_name, connection, cursor):
 
 	elif table_name == 'nodes':
 		cursor.execute('''
-			CREATE TABLE nodes(id INTEGER, lat FLOAT, lon FLOAT, user TEXT, uid INTEGER, \
+			CREATE TABLE nodes(id INTEGER, lat DECIMAL, lon DECIMAL, user TEXT, uid INTEGER, \
 									version TEXT, changeset INTEGER, timestamp TEXT)
 			''')
 		connection.commit()
