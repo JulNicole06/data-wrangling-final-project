@@ -27,5 +27,11 @@ Initial code provided by Udacity to clean and shape XML elements into provided s
 ##### 6. create_database.py
 Code used to import .csv files into SQL tables
 
-##### 7. roswell.db
-SQL database of OSM data for Roswell, GA
+##### 7. sample.osm
+sample OSM XML file of Roswell, GA
+
+##### 8. final_submission.py
+Code used to run files 1-6 created in this project for the final submission
+
+##### 9. submission_document.pdf
+Project Summary and write-up

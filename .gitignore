@@ -1,6 +1,7 @@
 .ipynb_checkpoints/*
-roswell.osm
 csv_files/*
 create_sample.py
-sample.osm
 *.pyc
+submission_document.ipynb
+roswell.db
+roswell.osm
